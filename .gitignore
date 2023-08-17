@@ -1,0 +1,5 @@
+temp/
+data/
+database/
+*.duckdb
+logs/
