@@ -11,7 +11,7 @@ ALTER TABLE multi_age_composite_unpivoted
 RENAME COLUMN value TO Composite_Value;
 
 ALTER TABLE multi_age_composite_unpivoted 
-ALTER COLUMN School_Code SET DATA TYPE INT;
+ALTER COLUMN School_Code SET DATA TYPE BIGINT;
 
 ALTER TABLE multi_age_composite_unpivoted 
 ALTER COLUMN Year SET DATA TYPE INT;
@@ -22,3 +22,5 @@ WHERE Composite_Value = 'NULL';
 
 ALTER TABLE multi_age_composite_unpivoted
 ALTER COLUMN Composite_Value SET DATA TYPE FLOAT;
+
+
