@@ -5,7 +5,7 @@ CREATE TABLE student_attendance_data AS SELECT * FROM read_csv_auto('./data/atte
 SELECT * from multi_age_composite_unpivoted;
 SELECT * from public_school_nsw_master_dataset;
 
-ALTER TABLE unpivoted_dataset RENAME TO multi_age_composite_unpivoted;
+ALTER TABLE student_attendance_data RENAME TO student_attendance_dataset;
 
 ALTER TABLE multi_age_composite_unpivoted 
 RENAME COLUMN value TO Composite_Value;
