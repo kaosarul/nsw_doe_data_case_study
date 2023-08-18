@@ -1,29 +1,30 @@
-CREATE OR REPLACE VIEW school_master_data AS
+CREATE OR REPLACE VIEW SCHOOL_MASTER_DATA AS
 SELECT 
-    School_code, School_name, Town_suburb, Postcode, 
-    LGA, ASGS_remoteness, AECG_region, Latitude, Longitude
+    SCHOOL_CODE, SCHOOL_NAME, TOWN_SUBURB, POSTCODE, 
+    LGA, ASGS_REMOTENESS, AECG_REGION, LATITUDE, LONGITUDE
 FROM 
-    public_school_nsw_master_dataset;
+    PUBLIC_SCHOOL_NSW_MASTER_DATASET;
 
-CREATE OR REPLACE VIEW school_attendance_data AS
+CREATE OR REPLACE VIEW SCHOOL_ATTENDANCE_DATA AS
 SELECT 
-    School_Code, Year, Attendance_pct
+    SCHOOL_CODE, YEAR, ATTENDANCE_PCT
 FROM 
-    student_attendance_unpivoted;
+    STUDENT_ATTENDANCE_UNPIVOTED;
 
-CREATE OR REPLACE VIEW school_composite_data AS
+CREATE OR REPLACE VIEW SCHOOL_COMPOSITE_DATA AS
 SELECT 
-    School_code, Year, Measure, Composite_Value
+    SCHOOL_CODE, SCHOOL_NAME, YEAR, 
+    COMPOSITE_CLASS_COUNT, COMPOSITE_CLASS_STUDENTS, 
+    PCT_COMPOSITE_CLASSES, PCT_COMPOSITE_CLASS_STUDENTS
 FROM 
-    multi_age_composite_unpivoted;
+    MULTI_AGE_COMPOSITE_UNPIVOTED;
 
-CREATE OR REPLACE VIEW school_characteristics AS
+
+CREATE OR REPLACE VIEW SCHOOL_CHARACTERISTICS AS
 SELECT 
-    School_code, Level_of_schooling, Selective_school, Opportunity_class, 
-    School_specialty_type, latest_year_enrolment_FTE, Indigenous_pct, LBOTE_pct, 
-    School_subtype, Preschool_ind, Distance_education, Intensive_english_centre, 
-    School_gender, Late_opening_school
+    SCHOOL_CODE, LEVEL_OF_SCHOOLING, SELECTIVE_SCHOOL, OPPORTUNITY_CLASS, 
+    SCHOOL_SPECIALTY_TYPE, LATEST_YEAR_ENROLMENT_FTE, INDIGENOUS_PCT, LBOTE_PCT, 
+    SCHOOL_SUBTYPE, PRESCHOOL_IND, DISTANCE_EDUCATION, INTENSIVE_ENGLISH_CENTRE, 
+    SCHOOL_GENDER, LATE_OPENING_SCHOOL
 FROM 
-    public_school_nsw_master_dataset;
-
-
+    PUBLIC_SCHOOL_NSW_MASTER_DATASET;
