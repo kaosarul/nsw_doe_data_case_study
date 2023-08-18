@@ -54,6 +54,10 @@ END;
 UPDATE public_school_nsw_master_dataset
 SET Date_1st_teacher = CAST(Date_1st_teacher AS DATE);
 
+ALTER TABLE student_attendance_unpivoted
+ALTER COLUMN Year SET DATA TYPE INT;
+
+
 
 
 
