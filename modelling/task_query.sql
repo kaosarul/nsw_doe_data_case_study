@@ -57,6 +57,16 @@ SET Date_1st_teacher = CAST(Date_1st_teacher AS DATE);
 ALTER TABLE student_attendance_unpivoted
 ALTER COLUMN Year SET DATA TYPE INT;
 
+UPDATE student_attendance_unpivoted 
+SET Attendance_pct = NULL 
+WHERE Attendance_pct IN ('sp', 'na');
+
+
+ALTER TABLE student_attendance_unpivoted
+ALTER COLUMN Attendance_pct SET DATA TYPE DOUBLE;
+
+
+
 
 
 
