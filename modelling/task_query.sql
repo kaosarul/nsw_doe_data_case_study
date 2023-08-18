@@ -65,7 +65,7 @@ WHERE Attendance_pct IN ('sp', 'na');
 ALTER TABLE student_attendance_unpivoted
 ALTER COLUMN Attendance_pct SET DATA TYPE DOUBLE;
 
-
+SELECT COUNT(*) FROM school_characteristics;
 
 
 
