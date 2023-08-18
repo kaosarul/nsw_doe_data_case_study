@@ -67,6 +67,16 @@ ALTER COLUMN Attendance_pct SET DATA TYPE DOUBLE;
 
 SELECT COUNT(*) FROM school_characteristics;
 
+UPDATE multi_age_composite_unpivoted
+SET Composite_Value = ROUND(Composite_Value, 2);
+
+ALTER TABLE multi_age_composite_unpivoted
+RENAME COLUMN School_code TO School_Code;
+
+
+ALTER TABLE public_school_nsw_master_dataset
+RENAME COLUMN School_code TO School_Code;
+
 
 
 
