@@ -45,7 +45,7 @@ SET Date_1st_teacher =
 CASE 
     WHEN POSITION('/' IN Date_1st_teacher) > 0 THEN -- if the date contains a slash, it's in the DD/MM/YYYY format
         SUBSTR(Date_1st_teacher, 7, 4) || '-' || 
-        SUBSTR(Date_1st_teacher, 4, 2) || '-' || 
+        SUBSTR(Date_1st_teacher, 4, 2) || '-' || l
         SUBSTR(Date_1st_teacher, 1, 2)
     ELSE 
         Date_1st_teacher 
